@@ -1,5 +1,5 @@
 # i3 config file (v4) 
-# jw version 2
+# jw version 3
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 #
@@ -12,7 +12,7 @@
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
+font pango:monospace 8 
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -170,7 +170,12 @@ bar {
 }
 
 ################### my own mother bindings ############################
+# The focus will no|yes change if cursor hover window
 focus_follows_mouse no
+# Stacking the layout. 
+workspace_layout stacking
+
+
 bindsym Mod1+Shift+r restart
 bindsym Mod1+Shift+w reload
 # Pulse Audio controls
@@ -182,13 +187,3 @@ bindsym Print exec gnome-screenshot --interactive
 
 
 
-#######################################################################
-# automatically start i3-config-wizard to offer the user to create a
-# keysym-based config which used their favorite modifier (alt or windows)
-#
-# i3-config-wizard will not launch if there already is a config file
-# in ~/.i3/config.
-#
-# Please remove the following exec line:
-#######################################################################
-exec i3-config-wizard
